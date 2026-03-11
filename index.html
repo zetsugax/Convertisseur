@@ -8,17 +8,63 @@
 </head>
 <body>
     <div class="containeur">
-        <nav>
-            <button>Acceuill</button>
+        <nav class="navbar">
+
+            
+            <a href="index.html" class="home-button">Convertisseur</a>
         </nav>
 
     </div>
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolor fuga doloremque eius sint? Recusandae consectetur repellendus blanditiis eius esse tempore delectus praesentium, accusamus porro veritatis maiores repellat beatae nobis?</p>
+
+
+    <div class="explications">
+        <h1>Convertisseur</h1>
     </div>
 
     <div class="zone_convertisseur">
-        <p></p>
+        <h3>Zone de conversion</h3>
+
+        <div class="converter-grid">
+            <section class="card input-card">
+                <h4>Entrée</h4>
+                <label for="unit_type">Type d'unité</label>
+                <select id="unit_type">
+                    <option value="distance">Longueur</option>
+                    <option value="masse">Masse</option>
+                    <option value="temperature">Température</option>
+                </select>
+
+                <label for="from_unit">Unité de départ</label>
+                <select id="from_unit">
+                    <option value="m">mètre</option>
+                    <option value="ft">pied</option>
+                    <option value="p">pouce</option>
+                    <option value="celsius">celsius</option>
+                    <option value="fareneiht">fahrenheit</option>
+                </select>
+
+                <label for="input_value">Valeur</label>
+                <input type="number" name="input_value" id="input_value" placeholder="Valeur à convertir">
+
+                <button id="convert_button">Convertir</button>
+            </section>
+
+            <section class="card output-card">
+                <h4>Sortie</h4>
+                <label for="to_unit">Unité d'arrivée</label>
+                <select id="to_unit">
+                    <option value="m">mètre</option>
+                    <option value="ft">pied</option>
+                    <option value="p">pouce</option>
+                    <option value="celsius">celsius</option>
+                    <option value="fareneiht">fahrenheit</option>
+                </select>
+
+                <div id="result" class="result">-</div>
+            </section>
+        </div>
+
     </div>
+    <script src="script.js"t ></script>
 </body>
 </html>

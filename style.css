@@ -1,5 +1,98 @@
 body{
-    background-color: #beb9b9;
-    margin: 0px;
-    padding: 0px;
+    background-color: #3c4247;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
+
+/* Navigation - dark theme */
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:12px 16px;
+    background:#0b1114;
+    border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.home-button{
+    background:#0ea5a4;
+    color:#042826;
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+.home-button:hover{ filter:brightness(0.95); }
+
+/* Page header */
+.explications{ padding:18px 16px; text-align:left; }
+.explications h1{ margin:0 0 8px; color:#e6f7fb; font-size:1.8rem; }
+
+/* Converter box */
+.zone_convertisseur{
+    background:#476880;
+    padding:16px;
+    border-radius:10px;
+    margin:32px auto;
+    max-width:760px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.6);
+}
+.zone_convertisseur h3{
+    margin-top:0;
+    color:#cfeff5; 
+    text-align: center;
+    }
+.zone_convertisseur label{
+    display:block;
+    margin:10px 0 6px;
+    color:#bfeef6;
+    font-weight:600; 
+    }
+.zone_convertisseur select,
+.zone_convertisseur input{ 
+    display:block; 
+    padding:8px; 
+    border-radius:6px; 
+    background:#071011; 
+    color:#dff6fb; 
+    border:1px solid rgba(255,255,255,0.04);
+    max-width:100%; 
+}
+
+/* grid with two columns: input (Entrée) and output (Sortie) */
+.converter-grid{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+}
+.card{
+    flex:1 1 0;
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.06));
+    padding:14px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.03);
+}
+.card h4{ 
+    margin:0 0 8px;
+    color:#dff6fb;
+    }
+.result{
+    margin-top:12px;
+    padding:12px;
+    border-radius:6px;
+    background:#85989b;
+    color:#000000;
+    font-weight:700;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+@media (max-width:720px){
+    .converter-grid{ flex-direction:column; }
+}
+
+

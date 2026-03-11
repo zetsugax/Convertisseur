@@ -1,0 +1,84 @@
+	document.addEventListener('DOMContentLoaded', () => {
+		const unitType = document.getElementById('unit_type');
+		const fromUnit = document.getElementById('from_unit');
+		const toUnit = document.getElementById('to_unit');
+		const inputValue = document.getElementById('input_value');
+		const convertButton = document.getElementById('convert_button');
+		const resultDiv = document.getElementById('result');
+        
+        // Liste des unité à modifier si on souhaite ajouté des unité ou des types puis a ajouter dans convertValue
+		const UNITS = {
+			distance: [ { v: 'm', label: 'mètre (m)' }, { v: 'km', label: 'kilomètre (km)' }, { v: 'cm', label: 'centimètre (cm)' } ],
+			masse:    [ { v: 'g', label: 'gramme (g)' }, { v: 'kg', label: 'kilogramme (kg)' } ],
+			temperature: [ { v: 'celsius', label: 'Celsius (°C)' }, { v: 'fareneiht', label: 'Fahrenheit (°F)' } ]
+		};
+
+
+
+		function setOptions(selectEl, items){
+			selectEl.innerHTML = '';
+			items.forEach(it => {
+				const o = document.createElement('option');
+				o.value = it.v;
+				o.textContent = it.label;
+				selectEl.appendChild(o);
+			});
+		}
+
+		function updateUnitOptions(){
+			const type = unitType.value;
+			const list = UNITS[type] || [];
+			setOptions(fromUnit, list);
+			setOptions(toUnit, list);
+		}
+
+
+		function convertValue(type, value, from, to){
+			if (value === '' || isNaN(Number(value))) return NaN;
+			const v = Number(value);
+            // Test toute les combinaisons par raports au unité (bien verifié que tout les cas sont bon)
+			if (type === 'temperature'){
+				if (from === to) return v;
+				if (from === 'celsius' && to === 'fareneiht') return v * 9/5 + 32;
+				if (from === 'fareneiht' && to === 'celsius') return (v - 32) * 5/9;
+				return NaN;
+			}
+                
+			if (type === 'distance'){
+				if (from === to) return v;
+				if (from === 'm' && to === 'km') return v / 1000;
+				if (from === 'm' && to === 'cm') return v * 100;
+				if (from === 'km' && to === 'm') return v * 1000;
+				if (from === 'km' && to === 'cm') return v * 100000;
+				if (from === 'cm' && to === 'm') return v / 100;
+				if (from === 'cm' && to === 'km') return v / 100000;
+				return NaN;
+			}
+
+			if (type === 'masse'){
+				if (from === to) return v;
+				if (from === 'g' && to === 'kg') return v / 1000;
+				if (from === 'kg' && to === 'g') return v * 1000;
+				return NaN;
+			}
+
+			return NaN;
+		}
+
+		function showResult(val){
+			if (isNaN(val)) resultDiv.textContent = 'Impossible de convertir';
+			else resultDiv.textContent = String(Number(val.toPrecision(12)));
+		}
+
+		updateUnitOptions();
+		unitType.addEventListener('change', updateUnitOptions);
+
+		convertButton.addEventListener('click', () => {
+			const type = unitType.value;
+			const from = fromUnit.value;
+			const to = toUnit.value;
+			const val = inputValue.value;
+			const res = convertValue(type, val, from, to);
+			showResult(res);
+		});
+	});
