@@ -1,8 +1,9 @@
 p{
     color: red;
-    width: 28px;
+    width: 20px;
 }
 
 body {
     background-color: grey;
+    font-size: 18;
 }
