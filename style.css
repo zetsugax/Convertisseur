@@ -1,9 +1,5 @@
-p{
-    color: red;
-    width: 20px;
-}
-
-body {
-    background-color: grey;
-    font-size: 18px;
+body{
+    background-color: #beb9b9;
+    margin: 0px;
+    padding: 0px;
 }
