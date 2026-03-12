@@ -47,6 +47,13 @@ body{
     text-decoration: underline;
     text-underline-offset: 8px;
 }
+.zone_convertisseur p{
+    margin-top: 0;
+    color: #cfeff5;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: None;
+}
 .zone_convertisseur label{
     display:block;
     margin:10px 0 6px;
