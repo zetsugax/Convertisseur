@@ -24,7 +24,7 @@
 				selectEl.appendChild(o);
 			});
 		}
-
+// Met à jour les unités disponibles selon le type choisi
 		function updateUnitOptions(){
 			const type = unitType.value;
 			const list = UNITS[type] || [];
@@ -32,7 +32,7 @@
 			setOptions(toUnit, list);
 		}
 
-
+// Fonction principale qui réalise les conversions
 		function convertValue(type, value, from, to){
 			if (value === '' || isNaN(Number(value))) return NaN;
 			const v = Number(value);
