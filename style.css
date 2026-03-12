@@ -40,12 +40,12 @@ body{
     box-shadow:0 6px 18px rgba(0,0,0,0.6);
 }
 .zone_convertisseur h3{
-    margin-top:0;
-    color:#cfeff5; 
-    text-align: center;
-    font-size: 1.8rem; /* Agrandit le texte */
-    text-decoration: underline; /* Souligne le texte */
-    text-underline-offset: 8px; /* Décale un peu le soulignement pour faire plus joli */
+    margin-top: 0;
+    color: #cfeff5;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 8px;
 }
 .zone_convertisseur label{
     display:block;
