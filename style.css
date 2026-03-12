@@ -82,16 +82,35 @@ body{
     color:#dff6fb;
     }
 .result{
-    margin-top:12px;
-    padding:12px;
-    border-radius:6px;
-    background:#85989b;
-    color:#000000;
-    font-weight:700;
-    min-height:44px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #85989b;
+    color: #000000;
+    font-weight: 700;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style uniquement pour le bouton Convertir */
+#convert_button {
+    background-color: #0ea5a4;
+    color: #042826;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Effet quand on passe la souris sur le bouton */
+#convert_button:hover {
+    filter: brightness(0.95);
 }
 
 @media (max-width:720px){
