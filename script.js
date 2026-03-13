@@ -10,7 +10,8 @@
 		const UNITS = {
 			distance: [ { v: 'm', label: 'mètre (m)' }, { v: 'km', label: 'kilomètre (km)' }, { v: 'cm', label: 'centimètre (cm)' } ],
 			masse:    [ { v: 'g', label: 'gramme (g)' }, { v: 'kg', label: 'kilogramme (kg)' } ],
-			temperature: [ { v: 'celsius', label: 'Celsius (°C)' }, { v: 'fareneiht', label: 'Fahrenheit (°F)' } ]
+			temperature: [ { v: 'celsius', label: 'Celsius (°C)' }, { v: 'fareneiht', label: 'Fahrenheit (°F)' } ],
+			vitesse: [ {v: 'm/s' , label: 'mètre par seconde (m/s)' }, { v: 'km/h', label: 'kilomètre par heure (km/h)' } ]
 		};
 
 
@@ -59,6 +60,13 @@
 				if (from === to) return v;
 				if (from === 'g' && to === 'kg') return v / 1000;
 				if (from === 'kg' && to === 'g') return v * 1000;
+				return NaN;
+			}
+
+			if (type === 'vitesse'){
+				if (from === to) return v;
+				if (from === 'm/s' && to === 'km/h') return v * 3.6;
+				if (from === 'km/h' && to === 'm/s') return v / 3.6;
 				return NaN;
 			}
 
