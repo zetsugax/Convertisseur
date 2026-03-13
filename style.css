@@ -27,7 +27,7 @@ body{
 .home-button:hover{ filter:brightness(0.95); }
 
 /* Page header */
-.explications{ padding:18px 16px; text-align:left; }
+.explications{ padding:18px 16px; text-align:center; }
 .explications h1{ margin:0 0 8px; color:#e6f7fb; font-size:1.8rem; }
 
 /* Converter box */
