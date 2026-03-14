@@ -44,7 +44,7 @@
 				if (from === 'fareneiht' && to === 'celsius') return (v - 32) * 5/9;
 				return NaN;
 			}
-                
+             // Pour la disctance    
 			if (type === 'distance'){
 				if (from === to) return v;
 				if (from === 'm' && to === 'km') return v / 1000;
@@ -55,14 +55,14 @@
 				if (from === 'cm' && to === 'km') return v / 100000;
 				return NaN;
 			}
-
+            // Pour la masse    
 			if (type === 'masse'){
 				if (from === to) return v;
 				if (from === 'g' && to === 'kg') return v / 1000;
 				if (from === 'kg' && to === 'g') return v * 1000;
 				return NaN;
 			}
-
+             // Pour la vitesse
 			if (type === 'vitesse'){
 				if (from === to) return v;
 				if (from === 'm/s' && to === 'km/h') return v * 3.6;
