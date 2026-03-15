@@ -29,7 +29,7 @@ Un convertisseur d'unités simple et intuitif développé en HTML, CSS et JavaSc
 
 - **HTML5** : Structure de la page
 - **CSS3** : Mise en page et design
-- **JavaScript (ES6)** : Logique de conversion et manipulation du DOM
+- **JavaScript** : Logique de conversion et manipulation du DOM
 
 ## Comment ça marche
 
