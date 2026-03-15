@@ -8,10 +8,10 @@
         
         // Liste des unité à modifier si on souhaite ajouté des unité ou des types puis a ajouter dans convertValue
 		const UNITS = {
-			distance: [ { v: 'm', label: 'mètre (m)' }, { v: 'km', label: 'kilomètre (km)' }, { v: 'cm', label: 'centimètre (cm)' } ],
+			distance: [ { v: 'm', label: 'mètre (m)' }, { v: 'km', label: 'kilomètre (km)' }, { v: 'cm', label: 'centimètre (cm)' }, { v: 'mi', label: 'mile (mi)' } ],
 			masse:    [ { v: 'g', label: 'gramme (g)' }, { v: 'kg', label: 'kilogramme (kg)' } ],
 			temperature: [ { v: 'celsius', label: 'Celsius (°C)' }, { v: 'fareneiht', label: 'Fahrenheit (°F)' } ],
-			vitesse: [ {v: 'm/s' , label: 'mètre par seconde (m/s)' }, { v: 'km/h', label: 'kilomètre par heure (km/h)' } ]
+			vitesse: [ {v: 'm/s' , label: 'mètre par seconde (m/s)' }, { v: 'km/h', label: 'kilomètre par heure (km/h)' }, { v: 'mph', label: 'miles par heure (mph)' } ]
 		};
 
 
@@ -49,10 +49,16 @@
 				if (from === to) return v;
 				if (from === 'm' && to === 'km') return v / 1000;
 				if (from === 'm' && to === 'cm') return v * 100;
+				if (from === 'm' && to === 'mi') return v / 1609.344;
 				if (from === 'km' && to === 'm') return v * 1000;
 				if (from === 'km' && to === 'cm') return v * 100000;
+				if (from === 'km' && to === 'mi') return v * 0.621371;
 				if (from === 'cm' && to === 'm') return v / 100;
 				if (from === 'cm' && to === 'km') return v / 100000;
+				if (from === 'cm' && to === 'mi') return v / 160934.4;
+				if (from === 'mi' && to === 'm') return v * 1609.344;
+				if (from === 'mi' && to === 'km') return v / 0.621371;
+				if (from === 'mi' && to === 'cm') return v * 160934.4;
 				return NaN;
 			}
             // Pour la masse    
@@ -67,6 +73,10 @@
 				if (from === to) return v;
 				if (from === 'm/s' && to === 'km/h') return v * 3.6;
 				if (from === 'km/h' && to === 'm/s') return v / 3.6;
+				if (from === 'm/s' && to === 'mph') return v * 2.23694;
+				if (from === 'mph' && to === 'm/s') return v / 2.23694;
+				if (from === 'km/h' && to === 'mph') return v / 1.60934;
+				if (from === 'mph' && to === 'km/h') return v * 1.60934;
 				return NaN;
 			}
 

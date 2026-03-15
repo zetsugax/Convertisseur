@@ -4,10 +4,10 @@ Un convertisseur d'unités simple et intuitif développé en HTML, CSS et JavaSc
 
 ## Fonctionnalités
 
-- **Conversion de longueur** : mètres (m), kilomètres (km), centimètres (cm)
+- **Conversion de longueur** : mètres (m), kilomètres (km), centimètres (cm), miles (mi)
 - **Conversion de masse** : grammes (g), kilogrammes (kg)
 - **Conversion de température** : Celsius (°C), Fahrenheit (°F)
-- **Conversion de vitesse** : mètres par seconde (m/s), kilomètres par heure (km/h)
+- **Conversion de vitesse** : mètres par seconde (m/s), kilomètres par heure (km/h), miles par heure (mph)
 - Interface utilisateur simple et responsive
 - Calculs précis avec gestion des erreurs
 
