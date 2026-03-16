@@ -1,5 +1,5 @@
 body{
-    background-color: #3c4247;
+    background-color: #6b757e;
     color: #000000;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body{
     justify-content:space-between;
     gap:1rem;
     padding:12px 16px;
-    background:#0b1114;
+    background:#393c3d;
     border-bottom:1px solid rgba(255,255,255,0.03);
 }
 .home-button{
