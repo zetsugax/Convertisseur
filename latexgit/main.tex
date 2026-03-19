@@ -71,20 +71,28 @@ Nous avons instauré une communication via un canal dédié pour coordonner nos 
 \end{figure}
 
 
-
+\begin{figure}
+    \includegraphics[width=1\textwidth]{latexgit/image site.png}
+    \caption{Historique des commits montrant les différents auteurs}
+\end{figure}
 
 
 
 \subsection{[A3] Intégration des contributions et Flux quotidien}
 Le travail a été rythmé par des mises à jour quotidiennes. Chaque session de code suivait rigoureusement ce cycle de commandes pour éviter les désynchronisations :
+
+
+
+
 \begin{lstlisting}[caption=Routine de sauvegarde quotidienne]
 git status                # Verification des fichiers modifies
 git add .                 # Indexation des changements
 git commit -m "Message"   # Creation du point de sauvegarde
 git pull                  # Recuperation du travail des autres
 git push                  # Envoi sur le serveur
+
 \end{lstlisting}
-\textit{[Capture d'écran n°3 : Historique des commits montrant les différents auteurs]}
+
 
 \subsection{[B1] Gestion par branches et Résolution de conflit}
 Lors de la fusion de la branche JavaScript vers la branche principale, nous avons dû valider un commit de fusion (Merge Commit) via l'éditeur Vim, après avoir résolu un rejet de poussée (Push Rejected) \texttt .
@@ -112,18 +120,24 @@ git commit --no-edit
 \subsection{[B3] Pull Requests et [B4] Déploiement}
 Chaque ajout majeur a fait l'objet d'une \textit{Pull Request}. Ce système nous a permis de relire le code (Code Review) avant l'intégration finale. Enfin, le site a été déployé via \textbf{GitHub Pages}.
 \textbf{URL du site :} \url{https://zetsugax.github.io/Convertisseur/}
-\textit{[Capture d'écran n°5 : Pull Request validee / Capture n°6 : Site en ligne]}
+
+\begin{figure}[H]
+
+\includegraphics[width=1\textwidth]{latexgit/image site.png}
+\caption{ Image du site]}
+
+\end{figure}
+
 
 \subsection{[C1] Issues et [C4] GitHub Projects (Kanban)}
-L'organisation des tâches a été gérée via l'onglet \textbf{Issues}, chaque ticket étant assigné à un membre. Ces tickets ont été pilotés graphiquement via un tableau \textbf{Kanban} dans GitHub Projects, permettant de suivre les colonnes \textit{Todo}, \textit{In Progress} et \textit{Done}.
-\textit{[Capture d'écran n°7 : Liste des Issues / Capture n°8 : Tableau Kanban]}
+L'organisation des tâches a été gérée via l'onglet \textbf{Issues}, chaque ticket étant assigné à un membre.
 
-\section{Section 3 : Conclusion}
+\begin{figure}[H]
 
-\subsection{Bilan du projet}
-Ce projet a été particulièrement formateur, non seulement pour la programmation JavaScript, mais surtout pour l'apprentissage du travail collaboratif. Nous avons appris qu'une gestion rigoureuse des branches et des messages de commit est indispensable pour éviter de perdre du temps sur des conflits de fichiers évitables.
+\includegraphics[width=1\textwidth]{latexgit/image 7.png}
+\caption{ Liste des Issues]}
 
-\subsection{Difficultés et regrets}
-La principale difficulté a été la gestion des outils en ligne de commande (Vim, Rebase). Nous avons notamment appris à utiliser \texttt{git pull --rebase} pour résoudre les rejets de \texttt{push} de manière propre. Notre seul regret est de ne pas avoir utilisé les \textit{Issues} dès le lancement du projet, ce qui aurait permis une planification encore plus fine dès la phase de conception.
+\end{figure}
+
 
 \end{document}
